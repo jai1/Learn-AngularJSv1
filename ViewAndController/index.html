@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Need to name the app in order to use Controller -->
+<html lang="en" ng-app="myApp">
+<head>
+    <title>Using Directives and Views</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body>
+    <!-- $scope is the glue between View and Controller -->
+    <!-- Changes in scope by the View or Controller are reflected immediately -->
+    <!-- Name of the function has to be same as the name specified in ng-controller but the function scope is limited to div tag -->
+    <div class="container" ng-controller="SimpleController">
+        <h3>Adding a Simple Controller</h3>
+        <ul>
+            <li ng-repeat="customer in customers">
+            {{ customer.name }} lives in {{customer.city }}
+            </li>
+        </ul>
+    </div>
+
+    <!-- script tag can't contain HTML comments , it can only understand JS type comment -->
+    <script>
+        // This line tells Angular that SimpleController is implemented by function SimpleFunction
+        angular.module('myApp', []).controller('SimpleController', SimpleFunction);
+        //All variables including ng-model defined are a property of class scope
+        function SimpleFunction($scope) {
+            $scope.customers = [{name: 'Jai', city: 'Pheonix'}, {name: 'Mohit', city: 'Bei Jing'},
+                {name: 'Bhavin', city: 'Pheonix'}, {name: 'John', city: 'Jaipur'}, {name: 'Jack', city: 'Pheonix'},
+                {name: 'Ravi', city: 'Jaipur'}, {name: 'Jd', city: 'Pheonix'}, {name: 'Backchod Billi', city: 'Jaipur'}];
+        }
+    </script>
+</body>
+</html>
