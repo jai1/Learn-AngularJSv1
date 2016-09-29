@@ -3,12 +3,17 @@
 <head>
     <title>Using AngularJS Directives, Filters and Data Binding</title>
 </head>
-<body ng-init="names=['Jai', 'Mohit', 'Bhavin', 'John', 'Jack', 'Ravi', 'Jd', 'Backchod Billi']">
+<body ng-init="customers=[{name: 'Jai', city: 'Pheonix'}, {name: 'Mohit', city: 'Bei Jing'},
+{name: 'Bhavin', city: 'Pheonix'}, {name: 'John', city: 'Jaipur'}, {name: 'Jack', city: 'Pheonix'},
+{name: 'Ravi', city: 'Jaipur'}, {name: 'Jd', city: 'Pheonix'}, {name: 'Backchod Billi', city: 'Jaipur'}]">
     Name: <input type = "text" ng-model="name" />
     <br/>
     Filtered Results: {{ name }}
     <ul>
-        <li ng-repeat="personName in names | filter:name | orderBy:name">{{ personName }}</li>
+        <!-- In case of classes the filter is applied to each property -->
+        <!-- Filter is case INSENSITIVE -->
+        <!-- Since city is a property, it has to be in single quotes -->
+        <li ng-repeat="customer in customers | filter:name | orderBy:'city'">{{ customer.name }} lives in {{ customer.city | uppercase }}</li>
     </ul>
     <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 </body>
