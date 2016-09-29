@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <title>Using AngularJS Directives, Filters and Data Binding</title>
+</head>
+<body ng-init="names=['Jai', 'Mohit', 'Bhavin', 'John', 'Jack', 'Ravi', 'Jd', 'Backchod Billi']">
+    Name: <input type = "text" ng-model="name" />
+    <br/>
+    Filtered Results: {{ name }}
+    <ul>
+        <li ng-repeat="personName in names | filter:name | orderBy:name">{{ personName }}</li>
+    </ul>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</body>
+</html>
