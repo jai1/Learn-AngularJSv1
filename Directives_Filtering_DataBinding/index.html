@@ -15,6 +15,7 @@
         <!-- Since city is a property, it has to be in single quotes -->
         <li ng-repeat="customer in customers | filter:name | orderBy:'city'">{{ customer.name }} lives in {{ customer.city | uppercase }}</li>
     </ul>
+    <!-- This is the location of the CDN, used to download the angular library -->
     <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 </body>
 </html>
