@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>View 1</h2>
+    City:
+    <br/>
+    <!-- Create a new variable city with proerty name -->
+    <input type="text" ng-model="city.name"/>
+    <br />
+    <ul>
+        <!-- Using filter to filter out a particular property in the class -->
+        <li ng-repeat="customer in customers | filter:{city: city.name} | orderBy:cityName">
+            {{ customer.name }} lives in {{ customer.city }}.
+        </li>
+    </ul>
+    <a href="#/">View 1</a>
+</div>
