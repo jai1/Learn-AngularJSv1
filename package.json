@@ -1,0 +1,22 @@
+{
+  "name": "learn-angular",
+  "version": "1.0.0",
+  "description": "Learning Angular JS from https://www.youtube.com/watch?v=i9MHigUZKEM&amp;index=22&amp;list=WL",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jai1/Learn-AngularJSv1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jai1/Learn-AngularJSv1/issues"
+  },
+  "homepage": "https://github.com/jai1/Learn-AngularJSv1#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

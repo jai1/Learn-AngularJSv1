@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>View 1</h2>
+    Name:
+    <br/>
+    <input type="text" ng-model="name"/>
+    <br />
+    <ul>
+        <!-- Using filter to filter out a particular property in the class -->
+        <li ng-repeat="customer in customers | filter:{name: name} | orderBy:name">
+            {{ customer.name }} lives in {{ customer.city }}.
+        </li>
+    </ul>
+
+    <br />
+    <h2>Create Customer</h2>
+    <br />
+    Name:
+    <input type="text" placeholder="Enter Customer Name" ng-model="newCustomer.name" />
+    <br />
+    City:
+    <input type="city" placeholder="Enter Customer City" ng-model="newCustomer.city" />
+    <br />
+    <button ng-click="addCustomer()">Add Customer</button>
+    <br />
+    <a href="#/view2">View 2</a>
+</div>
